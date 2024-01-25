@@ -1,6 +1,6 @@
 # Continuous Assessment Practical Work of **LDS** - 2023/24
 
-Work carried out under the scope of the Software Development Laboratory Course, by the students:
+Work carried out by the students:
 
 
 - **Hugo Ribeiro** `8200441@estg.ipp.pt`
@@ -9,7 +9,7 @@ Work carried out under the scope of the Software Development Laboratory Course, 
 - **Sérgio Félix** `8200615@estg.ipp.pt`
 - **Daniel Teixeira** `8200378@estg.ipp.pt`
 
-from the School of Technology and Management of the Polytechnic Institute of Porto
+This project was developed within the scope of Software Development Laboratory curricular unit of my Software Engineering degree.
 
 ---
 
