@@ -1,0 +1,42 @@
+# Use root/example as user/password credentials
+# Using volumes for store data
+version: '3.1' 
+
+services:
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 8083:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./DataBase/data:/var/opt/mssql/data        
+      - ./DataBase/log:/var/opt/mssql/log
+      - ./DataBase/secrets:/var/opt/mssql/secrets
+    environment:
+      SA_PASSWORD: NewStrongP@ssw0rd
+      ACCEPT_EULA: Y
+      MSSQL_PID: Express
+      MSSQL_USER: SA
+      MSSQL_PASSWORD: NewStrongP@ssw0rd
+      MSSQL_DB: PulseConnect
+      MSSQL_ENABLE_SSL: false
+   
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8082:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/

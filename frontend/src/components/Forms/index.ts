@@ -1,0 +1,10 @@
+export { default as ForgotPasswordForm } from './Auth/ForgotPasswordForm';
+export { default as ResetPasswordForm } from './Auth/ResetPasswordForm';
+export { default as SignInForm } from './Auth/SignInForm';
+export { default as SignUpForm } from './Auth/SignUpForm';
+export { default as ContactForm } from './ContactForm';
+export { default as EditProfileForm } from './EditProfileForm';
+export { default as ChangeEmailForm } from './SettingsPage/ChangeEmailForm';
+export { default as ChangePasswordForm } from './SettingsPage/ChangePasswordForm';
+export { default as DisableAccountForm } from './SettingsPage/DisableAccountForm';
+export { default as LanguagesForm } from './SettingsPage/LanguagesForm';
